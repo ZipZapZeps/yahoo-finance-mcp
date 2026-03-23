@@ -90,7 +90,7 @@
 无需创建本地虚拟环境，直接从仓库运行服务器：
 
 ```bash
-uvx --from git+https://github.com/richin13/yahoo-finance-mcp yahoo-finance-mcp
+uvx --from git+https://github.com/Alex2Yang97/yahoo-finance-mcp yahoo-finance-mcp
 ```
 
 ### 本地开发
@@ -115,7 +115,7 @@ uvx --from git+https://github.com/richin13/yahoo-finance-mcp yahoo-finance-mcp
 通过以下命令运行打包后的入口点：
 
 ```bash
-uvx --from git+https://github.com/richin13/yahoo-finance-mcp yahoo-finance-mcp
+uvx --from git+https://github.com/Alex2Yang97/yahoo-finance-mcp yahoo-finance-mcp
 ```
 
 如果要测试当前本地工作区中的改动，可以运行：
@@ -150,7 +150,7 @@ uv run server.py
            "command": "uvx",
            "args": [
              "--from",
-             "git+https://github.com/richin13/yahoo-finance-mcp",
+             "git+https://github.com/Alex2Yang97/yahoo-finance-mcp",
              "yahoo-finance-mcp"
            ]
          }
@@ -165,7 +165,7 @@ uv run server.py
            "command": "uvx",
            "args": [
              "--from",
-             "git+https://github.com/richin13/yahoo-finance-mcp",
+             "git+https://github.com/Alex2Yang97/yahoo-finance-mcp",
              "yahoo-finance-mcp"
            ]
          }

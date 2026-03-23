@@ -92,7 +92,7 @@ With this MCP server, you can use Claude to:
 Run the server directly from the repository without creating a local virtual environment:
 
 ```bash
-uvx --from git+https://github.com/richin13/yahoo-finance-mcp yahoo-finance-mcp
+uvx --from git+https://github.com/Alex2Yang97/yahoo-finance-mcp yahoo-finance-mcp
 ```
 
 ### Local development
@@ -117,7 +117,7 @@ uvx --from git+https://github.com/richin13/yahoo-finance-mcp yahoo-finance-mcp
 Run the packaged entrypoint with:
 
 ```bash
-uvx --from git+https://github.com/richin13/yahoo-finance-mcp yahoo-finance-mcp
+uvx --from git+https://github.com/Alex2Yang97/yahoo-finance-mcp yahoo-finance-mcp
 ```
 
 For local changes in this checkout, use:
@@ -152,7 +152,7 @@ To integrate this server with Claude for Desktop:
            "command": "uvx",
            "args": [
              "--from",
-             "git+https://github.com/richin13/yahoo-finance-mcp",
+             "git+https://github.com/Alex2Yang97/yahoo-finance-mcp",
              "yahoo-finance-mcp"
            ]
          }
@@ -167,7 +167,7 @@ To integrate this server with Claude for Desktop:
            "command": "uvx",
            "args": [
              "--from",
-             "git+https://github.com/richin13/yahoo-finance-mcp",
+             "git+https://github.com/Alex2Yang97/yahoo-finance-mcp",
              "yahoo-finance-mcp"
            ]
          }
