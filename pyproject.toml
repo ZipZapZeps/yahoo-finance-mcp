@@ -4,32 +4,35 @@ build-backend = "hatchling.build"
 
 [project]
 name = "yahoo-finance-mcp"
-version = "0.1.0"
+version = "0.2.0"
 description = "MCP server implementation for yahoo finance integration"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
-    "mcp[cli]>=1.6.0",
+    "mcp[cli]>=1.9.0",
     "yfinance>=0.2.62",
 ]
 
-#: setup script entry point (server.py)
 [project.scripts]
 yahoo-finance-mcp = "server:main"
+compile-server = "compile_server:main"
 
 [project.optional-dependencies]
 dev = [
     "pre-commit>=3.6.0",
     "black>=24.2.0",
     "isort>=5.13.2",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-mock>=3.12.0",
 ]
 
 [tool.hatch.build.targets.wheel]
-only-include = ["server.py"]
+only-include = ["server.py", "compile_server.py"]
 
 [tool.black]
 line-length = 100
-target-version = ['py311']
+target-version = ['py313']
 include = '\.pyi?$'
 
 [tool.isort]
@@ -45,8 +48,14 @@ max-line-length = 88
 extend-ignore = ["E203"]
 exclude = [".git", "__pycache__", "build", "dist", ".venv"]
 
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.13"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
